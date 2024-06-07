@@ -20,7 +20,11 @@ app.get('/', (req, res) => {
 
 // User routes
 const userRoutes = require('./routes/user');
+const hallRoutes = require('./routes/hall');
+const serviceRoutes = require('./routes/service');
 app.use('/user', userRoutes);
+app.use('/hall', hallRoutes);
+app.use('/service', serviceRoutes);
 
 // Start the server
 app.listen(port, () => {

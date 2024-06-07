@@ -22,7 +22,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ['user', 'admin'],
         default: 'user'
-    }
+    },
+    hallids: {
+        type: [String],
+      },
+    serviceids: {
+        type: [String],
+    },
 });
 
 const User = mongoose.model('User', userSchema);
